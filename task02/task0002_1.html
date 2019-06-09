@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>爱好</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .hobby-input {
+            margin: 20px;
+        }
+        .submit {
+            margin: 20px;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .error-msg {
+            color: red;
+            font-size: 14px;
+        }
+        .hide {
+            display: none;
+        }
+        .hobby-disp {
+            margin: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hobby-input">
+        <label for="hobby">兴趣爱好: </label>
+        <textarea rows="5" cols="33" id="hobby"></textarea>
+        <div class="error-msg hide" id="err_msg">爱好数量超过最大数10个, 无法继续输入</div>
+    </div>
+    <div>
+        <button class="submit" id="submit">提交</button>
+    </div>
+    <div class="hobby-disp" id="hobby-disp">
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/task0002_1.js"></script>
+</body>
+</html>

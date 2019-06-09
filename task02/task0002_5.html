@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>界面拖拽交互</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .draggable-page {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-around;
+            width: 800px;
+            margin: 10px auto 0;
+            padding: 20px;
+            background: #eee;
+        }
+        .left-panel, .right-panel {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            padding-bottom: 200px;
+            border: 1px solid #000;
+            background: #fff;
+        }
+        .drag-item {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 50px;
+            margin-top: -1px;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            background: blueviolet;
+        }
+        .drag-item-index {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 100%;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+            background: #bbb;
+        }
+        .drag-add-tips {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            border: 3px dashed rgba(200, 200, 200, 0.7);
+        }
+        .drag-add-tips::before {
+            content: '+';
+            font-size: 32px;
+            line-height: 1;
+            color: rgba(200, 200, 200, 0.7);
+        }
+        .tips-hide {
+            visibility: hidden;
+        }
+        .dragable-border-disp {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="draggable-page">
+        <div class="left-panel" id="left-panel">
+            <div class="drag-item" id="drag-item1" draggable="true">
+                <div class="drag-item-index">1</div>
+            </div>
+            <div class="drag-item" id="drag-item2" draggable="true">
+                <div class="drag-item-index">2</div>
+            </div>
+            <div class="drag-item" id="drag-item3" draggable="true">
+                <div class="drag-item-index">3</div>
+            </div>
+            <div class="drag-item" id="drag-item4" draggable="true">
+                <div class="drag-item-index">4</div>
+            </div>
+            <div class="drag-add-tips tips-hide"></div>
+        </div>
+        <div class="right-panel" id="right-panel">
+            <div class="drag-item" id="drag-item5" draggable="true">
+                <div class="drag-item-index">5</div>
+            </div>
+            <div class="drag-item" id="drag-item6" draggable="true">
+                <div class="drag-item-index">6</div>
+            </div>
+            <div class="drag-item" id="drag-item7" draggable="true">
+                <div class="drag-item-index">7</div>
+            </div>
+            <div class="drag-item" id="drag-item8" draggable="true">
+                <div class="drag-item-index">8</div>
+            </div>
+            <div class="drag-add-tips tips-hide"></div>
+        </div>
+    </div>
+</body>
+</html>

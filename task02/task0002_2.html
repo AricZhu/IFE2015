@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>时间倒计时</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .time-input-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .input-time {
+            box-sizing: border-box;
+            width: 200px;
+            height: 36px;
+            padding: 0 10px;
+        }
+        .calc-time {
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1;
+        }
+        .disp-time-wrapper {
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+        }
+        .disp-time {
+            padding: 20px;
+            border: 3px dashed #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="time-input-wrapper">
+            <label for="input-time">
+                日期:
+                <input type="text" placeholder="日期格式为: YYYY-MM-DD" class="input-time" id="input-time" >
+            </label>
+            <button class="calc-time" id="calc-time">计算</button>
+        </div>
+        <div class="disp-time-wrapper">
+            <div class="disp-time" id="disp-time">
+                距离YYYY年MM月DD日还有XX天XX小时XX秒
+            </div>
+        </div>
+    </div>
+</body>
+</html>

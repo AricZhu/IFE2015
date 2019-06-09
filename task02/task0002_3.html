@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .loop-settings {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 660px;
+            padding: 20px;
+            margin: 10px auto;
+            font-size: 16px;
+            border: 3px dashed #aaa;
+        }
+        .setting-order {
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        .order-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .order-item:first-child {
+            margin-left: 0;
+        }
+        .setting-loop {
+            width: 400px;
+            margin-bottom: 10px;
+        }
+        .setting-looptime {
+            width: 400px;
+        }
+        .loop-time {
+            padding: 5px;
+            font-size: 14px;
+        }
+        .loop-disp {
+            width: 660px;
+            margin: 20px auto;
+        }
+        .img-wrapper {
+            position: relative;
+            width: 660px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .img-disp {
+            position: absolute;
+            display: flex;
+            left: 0;
+            transition: all .5s ease-out;
+        }
+        .img-disp:hover {
+            cursor: pointer;
+        }
+        .img-disp img {
+            width: 660px;
+            height: 400px;
+        }
+        .loop-img-idx-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .loop-img-idx {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            margin-top: -20px;
+        }
+        .idx-circle {
+            box-sizing: border-box;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 100%;
+            border: 2px solid #eee;
+        }
+        .idx-circle:hover {
+            cursor: pointer;
+        }
+        .idx-circle-active {
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="loop-wrapper">
+        <div class="loop-settings">
+            <div class="setting-order">
+                <div class="order-item">
+                    <input type="radio" id="order-normal" name="order" value="normal" checked>
+                    <label for="order-normal">正序</label>
+                </div>
+                <div class="order-item">
+                    <input type="radio" id="order-reverse" name="order" value="reverse">
+                    <label for="order-reverse">逆序</label>
+                </div>
+            </div>
+            <div class="setting-loop">
+                <input type="checkbox" id="check-loop" value="true" checked>
+                <label for="check-loop">循环播放</label>
+            </div>
+            <div class="setting-looptime">
+                <label for="loop-time">间隔时长(ms):</label>
+                <input type="text" id="loop-time" value="1000" class="loop-time">
+            </div>
+        </div>
+        <div class="loop-disp">
+            <div class="img-wrapper">
+                <div class="img-disp" style="left: 0;">
+                    <img src="./img/1.jpg">
+                    <img src="./img/2.jpg">
+                    <img src="./img/3.jpg">
+                    <img src="./img/4.jpg">
+                    <img src="./img/5.jpg">
+                </div>
+            </div>
+            <div class="loop-img-idx-wrapper">
+                <div class="loop-img-idx">
+                    <div class="idx-circle idx-circle-active"></div>
+                    <div class="idx-circle"></div>
+                    <div class="idx-circle"></div>
+                    <div class="idx-circle"></div>
+                    <div class="idx-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>输入提示框</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .input-suggest {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .suggest {
+            font-size: 16px;
+            margin-top: 10px;
+            padding: 5px;
+        }
+        .suggest-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            min-width: 250px;
+            max-height: 200px;
+            overflow: hidden;
+            opacity: 1;
+            border: 1px solid #ddd;
+            transition: all .6s ease-out;
+        }
+        .suggest-text > p {
+            margin: 0;
+            padding: 5px;
+        }
+        .suggest-text > p:hover {
+            cursor: pointer;
+            background: #ddd;
+        }
+        .ret-active {
+            background: #ddd;
+        }
+        .suggest-hide {
+            max-height: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-suggest">
+        <div>
+            <input type="text" class="suggest" id="suggest">
+            <div>
+                <div class="suggest-text suggest-hide" id="suggest-text">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
