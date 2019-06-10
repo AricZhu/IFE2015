@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './task02/js/task0002_5.js',
+    entry: './task03/js/main.js',
     output: {
         filename: '[name].[chunkhash].js',
         path: path.join(__dirname, '../dist')
@@ -43,7 +43,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './task02/task0002_5.html'
+            template: './task03/index.html'
         }),
         new CleanWebpackPlugin(),
         new webpack.HashedModuleIdsPlugin()
