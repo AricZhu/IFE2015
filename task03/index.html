@@ -10,79 +10,13 @@
         <div class="content">
             <div class="task-order">
                 <div class="order-content">
-                    <div class="task-all" count="( 11 )">所有任务</div>
+                    <div class="task-all" data-undo-count="( 11 )">所有任务</div>
                     <div class="task-order-list">
                         <div>分类列表</div>
-                        <div class="task-item-folder">
-                            <div class="task-folder-head">
-                                <svg class="icon icon-folder-open" aria-hidden="true">
-                                    <use xlink:href="#icon-folder-open"></use>
-                                </svg>
-                                <div class="folder-name" count="( 10 )">
-                                    <span>百度IFE项目</span>
-                                </div>
-                            </div>
-                            <div class="task-folder-file">
-                                <svg class="icon icon-file" aria-hidden="true">
-                                    <use xlink:href="#icon-file"></use>
-                                </svg>
-                                <div class="file-name" count="( 6 )">
-                                    <span>task1</span>
-                                </div>
-                            </div>
-                            <div class="task-folder-file">
-                                <svg class="icon icon-file" aria-hidden="true">
-                                    <use xlink:href="#icon-file"></use>
-                                </svg>
-                                <div class="file-name" count="( 4 )">
-                                    <span>task2</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="task-item-folder">
-                            <div class="task-folder-head">
-                                <svg class="icon icon-folder" aria-hidden="true">
-                                    <use xlink:href="#icon-folder"></use>
-                                </svg>
-                                <div class="folder-name" count="( 1 )">
-                                    <span>毕业设计</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="task-item-folder">
-                            <div class="task-folder-head">
-                                <svg class="icon icon-folder" aria-hidden="true">
-                                    <use xlink:href="#icon-folder"></use>
-                                </svg>
-                                <div class="folder-name" count="( 0 )">
-                                    <span>社团活动</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="task-item-folder">
-                            <div class="task-folder-head">
-                                <svg class="icon icon-folder" aria-hidden="true">
-                                    <use xlink:href="#icon-folder"></use>
-                                </svg>
-                                <div class="folder-name" count="( 0 )">
-                                    <span>家庭生活</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="task-item-folder">
-                            <div class="task-folder-head">
-                                <svg class="icon icon-folder" aria-hidden="true">
-                                    <use xlink:href="#icon-folder"></use>
-                                </svg>
-                                <div class="folder-name" count="( 0 )">
-                                    <span>默认分类</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="new-order">
-                    <span>新增分类</span>
+                <div class="new-order" id="new-order">
+                    新增分类
                 </div>
             </div>
             <div class="task-lists">
@@ -91,49 +25,20 @@
                     <div class="list-head-item">未完成</div>
                     <div class="list-head-item">已完成</div>
                 </div>
-                <div class="list-content">
-                    <div class="list-task-item">
-                        <div class="list-task-time"><span>2015-04-28</span></div>
-                        <div class="list-task-title"><span>to-do 1</span></div>
-                        <div class="list-task-title"><span>to-do 2</span></div>
-                    </div>
-                    <div class="list-task-item">
-                        <div class="list-task-time"><span>2015-04-29</span></div>
-                        <div class="list-task-title"><span>to-do 3</span></div>
-                        <div class="list-task-title"><span>to-do 4</span></div>
-                    </div>
-                    <div class="list-task-item">
-                        <div class="list-task-time"><span>2015-04-30</span></div>
-                        <div class="list-task-title"><span>to-do 5</span></div>
-                        <div class="list-task-title"><span>to-do 6</span></div>
-                    </div>
-                    <div class="list-task-item">
-                        <div class="list-task-time"><span>2015-05-04</span></div>
-                        <div class="list-task-title"><span>to-do 7</span></div>
-                    </div>
-                </div>
-                <div class="new-task">
-                    <span>新增任务</span>
+                <div class="list-content"></div>
+                <div class="new-task" id="new-task">
+                    新增任务
                 </div>
             </div>
             <div class="task-desc">
-                <div class="task-title">
-                    <div class="task-action">
-                        <svg class="icon icon-check" aria-hidden="true">
-                            <use xlink:href="#icon-check-circle"></use>
-                        </svg>
-                        <svg class="icon icon-edit" aria-hidden="true">
-                            <use xlink:href="#icon-edit-square"></use>
-                        </svg>
-                    </div>
-                    <div class="task-name">to-do 6</div>
-                </div>
-                <div class="task-datetime">
-                    <span>任务日期：2015-04-30</span>
-                </div>
-                <div class="task-content">
-                    <span>完成task3的编码工作</span>
-                </div>
+            </div>
+        </div>
+        <div class="modal-add modal-hide" id="modal-add-order">
+            <div class="modal-add-head"><span>新增分类</span></div>
+            <div class="modal-add-content">
+                <input class="new-order-input" type="text" />
+                <button class="modal-button modal-cancel">取消</button>
+                <button class="modal-button modal-ok">确定</button>
             </div>
         </div>
     </div>
